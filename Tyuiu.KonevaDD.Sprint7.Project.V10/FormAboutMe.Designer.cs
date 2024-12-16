@@ -29,51 +29,55 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAboutMe));
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            textBoxAboutMe = new TextBox();
             buttonOK_KDD = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            //
-            // pictureBox1
-            //
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(418, 413);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            //
-            // textBox1
-            //
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(-1, -8);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(380, 77);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Работу выполнила студентка 1-го курса, группы АСОиУБ-24-1, Конева Дарья Денисовна.";
-            //
+            // 
+            // textBoxAboutMe
+            // 
+            textBoxAboutMe.Dock = DockStyle.Fill;
+            textBoxAboutMe.Font = new Font("Segoe UI", 12F);
+            textBoxAboutMe.Location = new Point(0, 0);
+            textBoxAboutMe.Margin = new Padding(3, 4, 3, 4);
+            textBoxAboutMe.Multiline = true;
+            textBoxAboutMe.Name = "textBoxAboutMe";
+            textBoxAboutMe.ReadOnly = true;
+            textBoxAboutMe.Size = new Size(633, 696);
+            textBoxAboutMe.TabIndex = 1;
+            textBoxAboutMe.Text = resources.GetString("textBoxAboutMe.Text");
+            // 
             // buttonOK_KDD
-            //
-            buttonOK_KDD.Location = new Point(326, 384);
+            // 
+            buttonOK_KDD.Location = new Point(523, 663);
+            buttonOK_KDD.Margin = new Padding(3, 4, 3, 4);
             buttonOK_KDD.Name = "buttonOK_KDD";
-            buttonOK_KDD.Size = new Size(75, 23);
+            buttonOK_KDD.Size = new Size(86, 31);
             buttonOK_KDD.TabIndex = 2;
             buttonOK_KDD.Text = "Ok";
             buttonOK_KDD.UseVisualStyleBackColor = true;
             buttonOK_KDD.Click += buttonOK_KDD_Click;
-            //
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(164, 220);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(289, 282);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // FormAboutMe
-            //
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(418, 413);
-            Controls.Add(buttonOK_KDD);
-            Controls.Add(textBox1);
+            ClientSize = new Size(633, 696);
             Controls.Add(pictureBox1);
+            Controls.Add(buttonOK_KDD);
+            Controls.Add(textBoxAboutMe);
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAboutMe";
@@ -85,9 +89,8 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox textBoxAboutMe;
         private Button buttonOK_KDD;
+        private PictureBox pictureBox1;
     }
 }
